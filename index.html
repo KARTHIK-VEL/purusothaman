@@ -672,13 +672,82 @@ section{position:relative; z-index:1; padding:110px 0;}
 .award-text .y{font-family:var(--font-mono); font-size:11.5px; color:var(--slate); margin-top:6px;}
 @media(max-width:780px){.awards-grid{grid-template-columns:1fr;}}
 
-.pub-list{margin-top:8px; display:flex; flex-direction:column;}
+.pub-list{margin-top:16px; display:flex; flex-direction:column; gap:16px;}
 .pub-item{
-  padding:20px 0; border-bottom:1px solid var(--hairline); display:flex; gap:18px; align-items:baseline;
+  background: var(--bg-card);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 22px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.pub-item:first-child{padding-top:0;}
-.pub-marker{font-family:var(--font-mono); font-size:12px; font-weight:700; color:var(--signal-dark); flex-shrink:0; width:24px;}
-.pub-title{font-family:var(--font-display); font-size:15px; font-weight:600; color:var(--paper); line-height:1.5;}
+.pub-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--signal-dark);
+  box-shadow: var(--card-shadow-hover);
+}
+.pub-marker{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--signal-dark);
+  background: var(--signal-dim);
+  border: 1px solid rgba(101, 163, 13, 0.25);
+  padding: 5px 11px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.pub-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+.pub-title{
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--paper);
+  line-height: 1.45;
+}
+.pub-authors {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--paper-dim);
+  line-height: 1.5;
+}
+.pub-authors strong {
+  color: var(--signal-dark);
+  font-weight: 600;
+}
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--slate);
+  margin-top: 4px;
+}
+.pub-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: var(--bg-raised);
+  border: 1px solid var(--hairline-strong);
+  color: var(--paper-dim);
+  font-family: var(--font-mono);
+}
+.pub-badge.year {
+  background: var(--signal-dim);
+  color: var(--signal-dark);
+  border-color: rgba(101, 163, 13, 0.2);
+}
 
 /* ============ CONTACT / FOOTER ============ */
 .contact-section{
@@ -2742,31 +2811,182 @@ footer{
 <section id="publications" style="padding-top:0;">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="section-tag">Research</div>
-      <h2>Publications.</h2>
+      <div class="section-tag">Research &amp; Papers</div>
+      <h2>Selected Publications (12).</h2>
+      <p class="section-sub">Peer-reviewed international journal articles, IEEE conference proceedings, and book chapters spanning Edge AI, Wireless Sensor Networks, IoT Intrusion Detection, and Deep Learning Applications.</p>
     </div>
     <div class="pub-list">
+
       <div class="pub-item reveal">
         <span class="pub-marker">01</span>
-        <div>
-          <span class="pub-title">Smart Attendance System using CdLdp Algorithm</span>
-          <span class="pub-meta">Journal of Ambient Intelligence and Humanized Computing · Springer (2021)</span>
+        <div class="pub-content">
+          <div class="pub-title">QUANTUM-ENHANCED RED DEER OPTIMIZATION FOR OPTIMIZING TASK SCHEDULING AND ENERGY EFFICIENCY IN CLOUD-BASED HEALTHCARE SYSTEMS</div>
+          <div class="pub-authors">NATARAJ, N; <strong>PURUSHOTHAMAN, P</strong>; ARUNA, R</div>
+          <div class="pub-meta">
+            <span>TPM–Testing, Psychometrics, Methodology in Applied Psychology</span>
+            <span class="pub-badge">Vol. 32, S3</span>
+            <span class="pub-badge">pp. 2124–2136</span>
+            <span class="pub-badge year">2025</span>
+          </div>
         </div>
       </div>
+
       <div class="pub-item reveal reveal-delay-1">
         <span class="pub-marker">02</span>
-        <div>
-          <span class="pub-title">COVID-19: AI-Enabled Social Distancing Detector using CNN</span>
-          <span class="pub-meta">IEEE International Conference on Circuit, Power and Computing Technologies · IEEE Xplore (2022)</span>
+        <div class="pub-content">
+          <div class="pub-title">Enhanced localization model in wireless sensor network using Self adaptive-Barnacles Mating optimization</div>
+          <div class="pub-authors"><strong>Purusothaman, P.</strong>; Gopalakrishnan, B.</div>
+          <div class="pub-meta">
+            <span>Cybernetics and Systems</span>
+            <span class="pub-badge">Vol. 55, No. 5</span>
+            <span class="pub-badge">pp. 1156–1183</span>
+            <span class="pub-badge">Taylor &amp; Francis</span>
+            <span class="pub-badge year">2024</span>
+          </div>
         </div>
       </div>
+
       <div class="pub-item reveal reveal-delay-2">
         <span class="pub-marker">03</span>
-        <div>
-          <span class="pub-title">Fuzzy-Based Mobile Anchor Localization in Wireless Sensor Networks</span>
-          <span class="pub-meta">International Journal of Communication Systems · Wiley (2020)</span>
+        <div class="pub-content">
+          <div class="pub-title">Classification and Detection of Blood Subtype Cells Images using Hybrid Convolutional Neural Network</div>
+          <div class="pub-authors">Haripriya, R.; Gopalakrishnan, B.; <strong>Purusothaman, P.</strong></div>
+          <div class="pub-meta">
+            <span>Third International Conference on Smart Technologies, Communication and Robotics (STCR)</span>
+            <span class="pub-badge">IEEE</span>
+            <span class="pub-badge year">2024</span>
+          </div>
         </div>
       </div>
+
+      <div class="pub-item reveal">
+        <span class="pub-marker">04</span>
+        <div class="pub-content">
+          <div class="pub-title">Retinopathy Detection on Diabetic Patients through Transfer Learning based Inceptionv3 Algorithm</div>
+          <div class="pub-authors">Haripriya, R.; Gopalakrishnan, B.; <strong>Purusothaman, P.</strong></div>
+          <div class="pub-meta">
+            <span>International Conference on Applied Artificial Intelligence and Computing (ICAAIC)</span>
+            <span class="pub-badge">pp. 299–306</span>
+            <span class="pub-badge">IEEE</span>
+            <span class="pub-badge year">2022</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal reveal-delay-1">
+        <span class="pub-marker">05</span>
+        <div class="pub-content">
+          <div class="pub-title">A new design of intrusion detection in IoT sector using optimal feature selection and high ranking-based ensemble learning model</div>
+          <div class="pub-authors">Gopalakrishnan, B.; <strong>Purusothaman, P.</strong></div>
+          <div class="pub-meta">
+            <span>Peer-to-Peer Networking and Applications</span>
+            <span class="pub-badge">Vol. 15, No. 5</span>
+            <span class="pub-badge">pp. 2199–2226</span>
+            <span class="pub-badge">Springer</span>
+            <span class="pub-badge year">2022</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal reveal-delay-2">
+        <span class="pub-marker">06</span>
+        <div class="pub-content">
+          <div class="pub-title">Traffic Congestion Detection through Modified Resnet50 and Prediction of Traffic using Clustering</div>
+          <div class="pub-authors">Prawinsankar, D.; Gunasekaran, M.; Gopalakrishnan, B.; <strong>Purusothaman, P.</strong></div>
+          <div class="pub-meta">
+            <span>Smart Technologies, Communication and Robotics (STCR)</span>
+            <span class="pub-badge">pp. 1–5</span>
+            <span class="pub-badge">IEEE</span>
+            <span class="pub-badge year">2021</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <span class="pub-marker">07</span>
+        <div class="pub-content">
+          <div class="pub-title">Adaptive neural network with hybrid optimization oriented localization in wireless sensor network: A multi-objective model</div>
+          <div class="pub-authors"><strong>Purusothaman, P.</strong>; Gunasekaran, M.</div>
+          <div class="pub-meta">
+            <span>International Journal of Wavelets, Multiresolution and Information Processing</span>
+            <span class="pub-badge">Vol. 19, No. 01</span>
+            <span class="pub-badge">World Scientific</span>
+            <span class="pub-badge year">2021</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal reveal-delay-1">
+        <span class="pub-marker">08</span>
+        <div class="pub-content">
+          <div class="pub-title">COVID-19: AI-enabled social distancing detector using CNN</div>
+          <div class="pub-authors">Anitha Kumari, K.; <strong>Purusothaman, P.</strong>; Dharani, D.; Padmashani, R.</div>
+          <div class="pub-meta">
+            <span>Computational Intelligence Techniques for Combating COVID-19</span>
+            <span class="pub-badge">pp. 95–115</span>
+            <span class="pub-badge">Springer</span>
+            <span class="pub-badge year">2021</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal reveal-delay-2">
+        <span class="pub-marker">09</span>
+        <div class="pub-content">
+          <div class="pub-title">Prediction of COVID-19 Victims with Chest X-Ray using COVIDNet and Deep Convolutional Neural Network</div>
+          <div class="pub-authors">Gopalakrishnan, B.; Manikantan, M.; <strong>Purusothaman, P.</strong>; Naveena, S.</div>
+          <div class="pub-meta">
+            <span>International Conference on Advancements in Electrical, Electronics, Communication, Computing and Automation (ICAECA)</span>
+            <span class="pub-badge">pp. 1–5</span>
+            <span class="pub-badge">IEEE</span>
+            <span class="pub-badge year">2021</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal">
+        <span class="pub-marker">10</span>
+        <div class="pub-content">
+          <div class="pub-title">Location Identification of Sensor Nodes Using Dynamic Path Planning Mobile Nodes in Wireless Sensor Networks</div>
+          <div class="pub-authors"><strong>Purusothaman, P.</strong>; Gunasekaran, M.; Gopalakrishnan, B.</div>
+          <div class="pub-meta">
+            <span>Journal of Computational and Theoretical Nanoscience</span>
+            <span class="pub-badge">Vol. 15, No. 5</span>
+            <span class="pub-badge">pp. 1562–1567</span>
+            <span class="pub-badge">American Scientific Publishers</span>
+            <span class="pub-badge year">2018</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal reveal-delay-1">
+        <span class="pub-marker">11</span>
+        <div class="pub-content">
+          <div class="pub-title">Pre Defined Trajectory Algorithm for Mobile Anchor Based Localization in Wireless Sensor Networks</div>
+          <div class="pub-authors">Divya, S.; <strong>Purusothaman, P.</strong></div>
+          <div class="pub-meta">
+            <span>International Journal of Computer Science and Network Security (IJCSNS)</span>
+            <span class="pub-badge">Vol. 15, No. 1</span>
+            <span class="pub-badge">p. 71</span>
+            <span class="pub-badge year">2015</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-item reveal reveal-delay-2">
+        <span class="pub-marker">12</span>
+        <div class="pub-content">
+          <div class="pub-title">Fuzzy RSSI based localization in wireless sensor networks</div>
+          <div class="pub-authors"><strong>Purusothaman, P.</strong>; Sivakumar, S.</div>
+          <div class="pub-meta">
+            <span>International Journal of Engineering Research and Technology</span>
+            <span class="pub-badge">Vol. 2, No. 8</span>
+            <span class="pub-badge">pp. 1323–1328</span>
+            <span class="pub-badge year">2013</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
