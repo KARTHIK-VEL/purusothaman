@@ -1821,8 +1821,11 @@ footer{
   .partners-row {
     grid-template-columns: 1fr;
   }
-  p, .about-body p, .tl-desc, .tl-bullets li, .hero-role {
-    text-align: left;
+  p, .about-body p, .about-lede, .tl-desc, .tl-bullets li, .hero-role, .section-sub, .gallery-info .desc {
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }
 
